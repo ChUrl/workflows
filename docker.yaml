@@ -3,6 +3,8 @@ name: Build Docker image
 on:
   push:
     branches: [master, main]
+    paths:
+      - ".gitea/workflows/docker.yaml"
 
 jobs:
   build-docker:

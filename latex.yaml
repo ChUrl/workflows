@@ -3,6 +3,8 @@ name: Build LaTeX document
 on:
   push:
     branches: [master, main]
+    paths:
+      - ".gitea/workflows/latex.yaml"
 
 jobs:
   build-latex:
