@@ -13,7 +13,7 @@ jobs:
       - name: Build LaTeX document
         run: docker run --rm --volumes-from ${{ env.JOB_CONTAINER_NAME }} --workdir ${{ github.workspace }} gitea.vps.chriphost.de/christoph/docker-texlive:latest latexmk -shell-escape -pdf <MAIN-FILE>.tex
       - name: Rename artifact
-        run: mv <FILE-NAME> <ARTIFACT-NAME>
+        run: mv <MAIN-FILE>.pdf <ARTIFACT-NAME>.pdf
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
